@@ -27,7 +27,7 @@ options {
     stages{
         stage('checkoutcode and Build'){ 
             steps{
-                git branch: '$(BranchName}', credentialsId: 'd70720a2-175b-4ff7-b330-9de30ceac7a5', url: 'https://github.com/BoruDineshkumarReddy/maven-web-application.git'
+                git branch: '${BranchName}', credentialsId: 'd70720a2-175b-4ff7-b330-9de30ceac7a5', url: 'https://github.com/BoruDineshkumarReddy/maven-web-application.git'
                 sh "mvn clean package"
                 sh "mvn sonar:sonar"
                 sh "mvn deploy"
