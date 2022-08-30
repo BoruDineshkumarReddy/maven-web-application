@@ -4,9 +4,9 @@ pipeline{
     triggers {
         githubPush()
 }
-parameters {
-  choice choices: ['development', 'master', 'qa', 'uat'], name: 'BranchName'
-}
+//parameters {
+  //choice choices: ['development', 'master', 'qa', 'uat'], name: 'BranchName'
+//}
 
 options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
